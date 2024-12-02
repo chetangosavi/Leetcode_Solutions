@@ -1,4 +1,4 @@
-package leetcodesolutions.arrays;
+package leetcodesolutions.array;
 
 public class SeccondLargeNumber {
 

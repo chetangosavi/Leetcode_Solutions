@@ -3,7 +3,7 @@ package leetcodesolutions.array;
 public class SeccondLargeNumber {
 
 	public static void main(String[] args) {
-		int[] nums = {12, 35, 1, 10, 34, 1};
+		int[] nums = {12, 35, 1, 10, 33, 35};
 		int n = nums.length;
         int max = -1;
         int prev = -1;

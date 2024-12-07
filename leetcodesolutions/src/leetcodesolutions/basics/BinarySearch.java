@@ -19,27 +19,27 @@ public class BinarySearch {
 				4) Repeat steps 2-3 until low becomes greater than high.
 		 */
 
-	int[] arr = {1,2,3,4,5,6,7,8,9};
-	int n = arr.length;
-	int target = 4;
-	int left = 0;
-	int right = n-1;
-	
-	while(left<=right) {
-		int mid =(left + right)/2;
-		if(arr[mid] == target) {
-			System.out.println(mid);
-			return;
-		}
-		if(arr[mid]<target) {
-			left = mid+1;
-		}
-		else {
-			right = mid-1;
-		}
-	}
-	
-	System.out.println(-1);
+				int[] arr = {1,2,3,4,5,6,7,8,9};
+				int n = arr.length;
+				int target = 4;
+				int left = 0;
+				int right = n-1;
+				
+				while(left<=right) {
+					int mid =(left + right)/2;
+					if(arr[mid] == target) {
+						System.out.println(mid);
+						return;
+					}
+					if(arr[mid]<target) {
+						left = mid+1;
+					}
+					else {
+						right = mid-1;
+					}
+				}
+				
+				System.out.println(-1);
   }
 
 }

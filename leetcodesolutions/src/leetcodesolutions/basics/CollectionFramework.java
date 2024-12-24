@@ -9,15 +9,15 @@ public class CollectionFramework {
 		  	It is one of the root interfaces of the Java Collection Hierarchy. The Collection interface is not directly implemented 
 		  	by any class. Instead, it is implemented indirectly through its sub-interfaces like List, Queue, and Set.
 		  	
-		  				Collection
-		  					|
-		  	________________|_______________________
+		  		Collection
+		  		    |
+		    ________________|_______________________
 		   |                   |                    |   					 
 		  List                Set                  Queue					
 		  
 		  -ArrayList        -HashSet			- priorityQueue				
-		  -LinkedList		-TreeSet			- Dequeue					
-		  -Vector			-LinkedHashSet									
+		  -LinkedList	    -TreeSet			- Dequeue					
+		  -Vector	    -LinkedHashSet									
 		  -Stack
 		  
 		  Sub-Interfaces of Collection Interface

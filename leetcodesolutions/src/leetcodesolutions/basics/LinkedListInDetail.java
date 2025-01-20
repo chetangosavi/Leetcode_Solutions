@@ -36,6 +36,8 @@ public class LinkedListInDetail {
 		li.add(3);
 		
 		System.out.println("Linked List: "+li);
+		
+		
 	}
 
 }

@@ -1,10 +1,10 @@
 package leetcodesolutions.oops;
 
-interface car{
+interface Car{
 	void displayCarInfo();
 }
 
-class CarInfo implements car{
+class CarInfo implements Car{
 	String carName;
 	
 	CarInfo(String carName){

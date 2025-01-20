@@ -10,5 +10,6 @@ public class AbstractClassEx {
 		 			- abstract class can have data members as well as methods or abstract methods
 		 			- data members inside interface are static and final
 		 */
+		
 	}
 }

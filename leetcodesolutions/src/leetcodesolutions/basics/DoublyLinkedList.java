@@ -41,7 +41,7 @@ public class DoublyLinkedList {
 			tail = newNode;
 		}
 		else {
-			newNode.next = tail;
+			newNode.prev = tail;
 			tail.next = newNode;
 			tail=newNode;
 		}
@@ -64,9 +64,92 @@ public class DoublyLinkedList {
 		}
 	}
 	
+	void forwardTraversal() {
+		Node current = head;
+		while(current!=null) {
+			System.out.print(current.data + " ");
+			 current = current.next;
+		}
+		System.out.println();
+	}
+	
+	void backwardTraversal() {
+		Node current = tail;
+		while(current!=null) {
+			System.out.print(current.data+" ");
+			current = current.prev;
+		}
+		System.out.println();
+	}
+	
+	void removeFromFront() {
+		if(head == null) {
+			return;
+		}
+		head = head.next;
+		if(head!=null) {
+			head.prev = null;
+		}
+		else {
+			tail = null;
+		}
+	}
+	
+	void removeFromBack() {
+		if(tail == null) {
+			return;
+		}
+		tail = tail.prev;
+		if(tail!=null) {
+			tail.next = null;
+		}
+		else {
+			head = null;
+		}
+	}
+	
+	//helper method to find node
+	Node findNode(int value) {
+		Node current = head;
+		while(current!=null) {
+			if(current.data == value) {
+				return current;
+			}
+			current = current.next;
+		}
+		return null;
+	}
+	void removeNode(Node node) {
+		if(node == null)return;
+		if(node == head) {
+			removeFromFront();
+			return;
+		}
+		if(node==tail) {
+			removeFromBack();
+			return;
+		}
+		node.next.prev = node.prev;
+		node.prev.next = node.next;
+		
+		
+	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		DoublyLinkedList list = new DoublyLinkedList();
+		list.addNodeAtHead(1);
+		list.addNodeAtTail(2);
+		list.addNodeAtTail(3);
+		list.addNodeAtTail(4);
+		list.addNodeAtTail(5);
+		list.backwardTraversal();
+		list.forwardTraversal();
+		list.removeFromFront();
+		list.forwardTraversal();
+		list.removeFromBack();
+		list.forwardTraversal();
+		Node nodeToDelete = list.findNode(3);
+		list.removeNode(nodeToDelete);
+		list.forwardTraversal();
 	}
 
 }
